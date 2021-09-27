@@ -15,8 +15,8 @@ I always do my best to make things ***pretty*** and ***functional***. I hope you
 ## Download :inbox_tray:
 
 - ***Fortuna*** (v.1.0.0):
-  - [Download for Android](https://github.com/iamtheblackunicorn/random/releases/download/v.1.0.0/Random-v1.0.0-Fortuna-Release.apk) (16.5 MB)
-  - [Download for Mac OSX](https://github.com/iamtheblackunicorn/random/releases/download/v.1.0.0/Random-v1.0.0-Fortuna-Release.app.zip) (12.9 MB)
+  - [Download for Android](https://github.com/iamtheblackunicorn/Random/releases/download/v.1.0.0/Random-v1.0.0-Fortuna-Release.apk) (15.9 MB)
+  - [Download for Mac OSX](https://github.com/iamtheblackunicorn/Random/releases/download/v.1.0.0/Random-v1.0.0-Fortuna-Release.app.zip) (12.4 MB)
 
 ## Building :hammer:
 
