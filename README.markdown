@@ -1,3 +1,7 @@
+<p align="center">
+ <img src="/assets/images/banner.png"/>
+</p>
+
 # RANDOM :game_die:
 
 *Let Fortuna decide for you!* :game_die:
