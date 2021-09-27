@@ -9,6 +9,102 @@ class TheDice extends StatefulWidget{
 class TheDiceState extends State<TheDice> {
   @override
   Widget build(BuildContext context){
+    List<Offset> offSetListOne = [
+      Offset(
+        MediaQuery.of(context).size.width/2,
+        MediaQuery.of(context).size.height/2
+      )
+    ];
+    List<Offset> offSetListTwo = [
+      Offset(
+        (MediaQuery.of(context).size.width/2)-(diceDimensions/3),
+        (MediaQuery.of(context).size.height/2)-(diceDimensions/3)
+      ),
+      Offset(
+        (MediaQuery.of(context).size.width/2)+(diceDimensions/3),
+        (MediaQuery.of(context).size.height/2)+(diceDimensions/3)
+      )
+    ];
+    List<Offset> offSetListThree = [
+      Offset(
+        (MediaQuery.of(context).size.width/2)-(diceDimensions/3),
+        (MediaQuery.of(context).size.height/2)-(diceDimensions/3)
+      ),
+      Offset(
+        (MediaQuery.of(context).size.width/2),
+        (MediaQuery.of(context).size.height/2)
+      ),
+      Offset(
+        (MediaQuery.of(context).size.width/2)+(diceDimensions/3),
+        (MediaQuery.of(context).size.height/2)+(diceDimensions/3)
+      )
+    ];
+    List<Offset> offSetListFour = [
+      Offset(
+        (MediaQuery.of(context).size.width/2)-(diceDimensions/3),
+        (MediaQuery.of(context).size.height/2)-(diceDimensions/3)
+      ),
+      Offset(
+        (MediaQuery.of(context).size.width/2)+(diceDimensions/3),
+        (MediaQuery.of(context).size.height/2)+(diceDimensions/3)
+      ),
+      Offset(
+        (MediaQuery.of(context).size.width/2)-(diceDimensions/3),
+        (MediaQuery.of(context).size.height/2)+(diceDimensions/3)
+      ),
+      Offset(
+        (MediaQuery.of(context).size.width/2)+(diceDimensions/3),
+        (MediaQuery.of(context).size.height/2)-(diceDimensions/3)
+      )
+    ];
+    List<Offset> offSetListFive = [
+      Offset(
+        (MediaQuery.of(context).size.width/2)-(diceDimensions/3),
+        (MediaQuery.of(context).size.height/2)-(diceDimensions/3)
+      ),
+      Offset(
+        (MediaQuery.of(context).size.width/2)+(diceDimensions/3),
+        (MediaQuery.of(context).size.height/2)+(diceDimensions/3)
+      ),
+      Offset(
+        (MediaQuery.of(context).size.width/2)-(diceDimensions/3),
+        (MediaQuery.of(context).size.height/2)+(diceDimensions/3)
+      ),
+      Offset(
+        (MediaQuery.of(context).size.width/2)+(diceDimensions/3),
+        (MediaQuery.of(context).size.height/2)-(diceDimensions/3)
+      ),
+      Offset(
+        (MediaQuery.of(context).size.width/2),
+        (MediaQuery.of(context).size.height/2)
+      )
+    ];
+    List<Offset> offSetListSix = [
+      Offset(
+        (MediaQuery.of(context).size.width/2)-(diceDimensions/3),
+        (MediaQuery.of(context).size.height/2)-(diceDimensions/3)
+      ),
+      Offset(
+        (MediaQuery.of(context).size.width/2)+(diceDimensions/3),
+        (MediaQuery.of(context).size.height/2)+(diceDimensions/3)
+      ),
+      Offset(
+        (MediaQuery.of(context).size.width/2)-(diceDimensions/3),
+        (MediaQuery.of(context).size.height/2)+(diceDimensions/3)
+      ),
+      Offset(
+        (MediaQuery.of(context).size.width/2)+(diceDimensions/3),
+        (MediaQuery.of(context).size.height/2)-(diceDimensions/3)
+      ),
+      Offset(
+        (MediaQuery.of(context).size.width/2)-(diceDimensions/3),
+        MediaQuery.of(context).size.height/2
+      ),
+      Offset(
+        (MediaQuery.of(context).size.width/2)+(diceDimensions/3),
+        MediaQuery.of(context).size.height/2
+      )
+    ];
     return Scaffold(
       body: new Stack(
         children: <Widget> [
@@ -19,7 +115,7 @@ class TheDiceState extends State<TheDice> {
             color: baseBackGroundColor,
             child: new CustomPaint(
               painter: Face(
-                offSetList: [Offset(MediaQuery.of(context).size.width/2,MediaQuery.of(context).size.height/2)]
+                offSetList: offSetListSix
               )
             )
           ),
