@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.random">
+    package="com.blackunicorn.random">
    <application
-        android:label="random"
+        android:label="Random"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

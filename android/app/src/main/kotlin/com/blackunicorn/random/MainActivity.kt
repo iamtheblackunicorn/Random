@@ -1,4 +1,4 @@
-package com.example.random
+package com.blackunicorn.random
 
 import io.flutter.embedding.android.FlutterActivity
 
