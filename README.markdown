@@ -4,7 +4,7 @@
 
 ## About :books:
 
-I recently saw an episode of DanTDM's play-through of the game *Lost in Random* where dice play a crucial role.
+I recently saw an episode of [***DanTDM's*** play-through of the game ***Lost in Random***](https://youtu.be/zyjdhzgMzsk) where dice play a crucial role.
 I wanted to create an app that would give the user a virtual die. *Random* is that app. While this highly experimental,
 I always do my best to make things ***pretty*** and ***functional***. I hope you have fun! :heart: :unicorn:
 
