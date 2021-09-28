@@ -36,6 +36,10 @@ class TheDiceState extends State<TheDice> {
   late Function buttonAction;
   late String buttonText;
   late Timer timer;
+  late Color bgColor;
+  late Color chFaceColor;
+  late String statusText;
+  late String armedStatus;
 
   /// Here we actually populate
   /// the empty variables.
@@ -49,6 +53,10 @@ class TheDiceState extends State<TheDice> {
     otherRandInst = new Random();
     buttonAction = rollDice;
     buttonText = rollText;
+    bgColor = baseBackGroundColor;
+    chFaceColor = diceFaceColor;
+    statusText = introText;
+    armedStatus = disarmed;
     offSetListOne = [
       Offset(
         (window.physicalSize.width/window.devicePixelRatio)/2,
@@ -162,11 +170,17 @@ class TheDiceState extends State<TheDice> {
   void stopRolling(){
     timer.cancel();
     setState((){
+      bgColor = baseBackGroundColor;
+      chFaceColor = diceFaceColor;
       otherRandInst = new Random();
       int randIndex = min + otherRandInst.nextInt(max - min);
       currentFace = allFaces[randIndex];
       buttonAction = rollDice;
       buttonText = rollText;
+      int result = randIndex + 1;
+      String userNum = result.toString();
+      statusText = '$outroText $userNum!';
+      armedStatus = disarmed;
     });
   }
 
@@ -175,21 +189,25 @@ class TheDiceState extends State<TheDice> {
   @override
   void rollDice(){
     setState((){
+      statusText = introText;
       buttonAction = stopRolling;
       buttonText = stopText;
+      bgColor = bgArmedColor;
+      chFaceColor = diceArmedColor;
+      armedStatus = armed;
       timer = Timer.periodic(
         Duration(
           milliseconds: duration
         ), (timer) {
-        setState(() {
-          randInst = new Random();
-          currentFace = allFaces[
-            randInst.nextInt(allFaces.length)
-          ];
+          setState(() {
+            randInst = new Random();
+            currentFace = allFaces[
+              randInst.nextInt(allFaces.length)
+            ];
+          });
         });
       });
-    });
-  }
+    }
 
   /// This is the main widget tree.
   /// We have a [Stack] as the main
@@ -207,10 +225,11 @@ class TheDiceState extends State<TheDice> {
           new Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
-            color: baseBackGroundColor,
+            color: bgColor,
             child: new CustomPaint(
               painter: Face(
-                offSetList: currentFace
+                offSetList: currentFace,
+                faceColor: chFaceColor
               )
             )
           ),
@@ -220,14 +239,13 @@ class TheDiceState extends State<TheDice> {
             child: new Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget> [
-
                 new Padding(
                   padding: EdgeInsets.all(outerPadding),
                   child:new RaisedButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(buttonRounding)
                     ),
-                    color: diceFaceColor,
+                    color: chFaceColor,
                     padding: EdgeInsets.only(
                       top: verticalPadding,
                       bottom: verticalPadding,
@@ -237,8 +255,8 @@ class TheDiceState extends State<TheDice> {
                     child: new Text(
                       buttonText,
                       style: TextStyle(
-                        color: baseBackGroundColor,
-                        fontSize: outerPadding,
+                        color: bgColor,
+                        fontSize: fontSize,
                         fontFamily: defaultFont
                       )
                     ),
@@ -247,11 +265,33 @@ class TheDiceState extends State<TheDice> {
                     }
                   )
                 )
+              ]
+            )
+          ),
 
-
+          new Center(
+            child: new Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget> [
+                new SizedBox(
+                  height: topPadding
+                ),
+                new Padding(
+                  padding: EdgeInsets.all(outerPadding),
+                  child: new Text(
+                    '$statusText\n$armedStatus',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: chFaceColor,
+                      fontSize: fontSize,
+                      fontFamily: defaultFont
+                    )
+                  ),
+                ),
               ]
             )
           )
+
         ]
       )
     );

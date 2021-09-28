@@ -13,8 +13,10 @@ class Face extends CustomPainter{
   /// This variable changes during
   /// state updates of the main widget.
   late final List<Offset> offSetList;
+  late final Color faceColor;
   Face({
     required this.offSetList,
+    required this.faceColor
   });
   void paint(Canvas canvas, Size size){
 
@@ -24,7 +26,7 @@ class Face extends CustomPainter{
       size.height/2
     );
     Paint facePaint = new Paint();
-    facePaint.color = diceFaceColor;
+    facePaint.color = faceColor;
     Rect diceFace = Rect.fromCenter(
       center:center,
       width:diceDimensions,

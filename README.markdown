@@ -15,8 +15,11 @@ I always do my best to make things ***pretty*** and ***functional***. I hope you
 ## Download :inbox_tray:
 
 - ***Fortuna*** (v.1.0.0):
-  - [Download for Android](https://github.com/iamtheblackunicorn/Random/releases/download/v.1.0.0/Random-v1.0.0-Fortuna-Release.apk) (15.26 MB)
-  - [Download for Mac OSX](https://github.com/iamtheblackunicorn/Random/releases/download/v.1.0.0/Random-v1.0.0-Fortuna-Release.app.zip) (11.83 MB)
+  - ***[Download for Android]*** (https://github.com/iamtheblackunicorn/Random/releases/download/v.1.0.0/Random-v1.0.0-Fortuna-Release.apk) (~15.2 MB)
+  - ***[Download for Mac OSX]*** (https://github.com/iamtheblackunicorn/Random/releases/download/v.1.0.0/Random-v1.0.0-Fortuna-Release.app.zip) (~11.8 MB)
+- ***Tarot*** (v.2.0.0):
+  - ***[Download for Android]*** (https://github.com/iamtheblackunicorn/Random/releases/download/v.2.0.0/Random-v2.0.0-Tarot-Release.apk) (~15.3 MB)
+  - ***[Download for Mac OSX]*** (https://github.com/iamtheblackunicorn/Random/releases/download/v.2.0.0/Random-v2.0.0-Tarot-Release.app.zip) (~13.2 MB)
 
 ## Building :hammer:
 
@@ -55,6 +58,12 @@ You have now generated a release build of *Random*.
 - upload to GitHub
 - polishing of the logic
 - minor fixes
+
+### Version 2.0.0: ***Tarot***
+
+- arming mechanics added
+- arming colors added
+- speed optimizations
 
 ## Note :scroll:
 
