@@ -1,5 +1,5 @@
 <p align="center">
- <img src="/assets/images/banner.png"/>
+ <img src="https://github.com/iamtheblackunicorn/Random/raw/main/assets/images/banner.png"/>
 </p>
 
 # RANDOM :game_die:
